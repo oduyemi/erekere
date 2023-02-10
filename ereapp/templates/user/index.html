@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erékéré</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css') }}"/>
+    <link rel="stylesheet" href="{{url_for('static', filename='bootstrap/css/bootstrap.min.css') }}" type="text/css">
+    <script src="{{url_for('static', filename='js/jquery-3.6.1.min.js') }}"  type="text/javascript"></script>
+    <script type="text/javascript" language="javascript" src="{{url_for('static', filename='js/script.js') }}" defer></script>
+    <script src="{{url_for('static', filename='bootstrap/css/bootstrap.min.css') }}" defer type="text/javascript"></script>
+
+<style>
+    #mailing{
+        position:relative;
+        left:-30%;
+    }
+    .tour{
+        z-index:50
+    }
+    .tour:hover{
+        background-color:#fff !important;
+
+    }
+</style
+
+</style>
+
+</head>
+<body>
+    <div class="container-fluid">
+            <!-- HEADER -->
+        <div class="row">
+            <div class="col-md-7 offset-5 _nav1 me-5 mt-1">
+                <ul>
+                    <li><a href="{{ url_for('aboutpage')}}" target="_self">ABOUT US</a></li>&emsp;&nbsp;&emsp;
+                    <li><a href="{{ url_for('mediapage')}}" target="_self">MEDIA CENTER</a></li>&emsp;&nbsp;&emsp;
+                    <li><a href="https://www.instagram.com/erekereng/" target="_blank">INSTAGRAM</a></li>&emsp;&nbsp;&emsp;
+                    <li><a href="https://www.facebook.com/erekereng/" target="_blank">FACEBOOK</a></li>&emsp;&nbsp;&emsp;
+                    <li><a href="https://www.twitter.com/erekereng/" target="_blank">TWITTER</a></li>&emsp;&nbsp;&emsp;
+                    <li><a href="{{ url_for('accountpage')}}" target="_self" class="myacct">MY ACCOUNT</a></li>
+                </ul>
+<!--               <button class="_mainbtn">Login</button> <-->
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 _nav2">
+                &emsp;<img src="static/images/logo/logo.png" alt="sitelogo" class="ms-5 logo">
+                &emsp;&nbsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&emsp;&emsp;&emsp;
+                <ul>
+                    <li><a href="{{ url_for('trippage')}}">Trip Gallery</a></li>&emsp;&nbsp;&emsp;
+                    <li><a href="{{ url_for('tourspage') }}">Upcoming Tours</a></li>&emsp;&nbsp;&emsp;
+                    <li><a href="{{ url_for('contactpage')}}">Contact Us</a></li>&emsp;&nbsp;&emsp;&emsp;&emsp;
+                </ul>
+                <button class="_mainbtn login">Login</button>&emsp;
+                <button class="_tbtn signup">Sign Up</button>
+            </div>
+        </div>    
+       
+    <div class="row justify-content-center align-items-center hero">
+        <div class="col-md-6 hero_left">
+            <h1>Fill Your Trips</h1>
+            <p class="pe-5">
+                The number 1 Destination Management Company that provides local knowledge
+                for events, activities and tours in Nigeria and the rest of Africa. We
+                curate group travel and tour experiences that linger.
+            </p>
+            <button class="hero_btn tour">Book A Tour</button>
+        </div>
+
+        <div class="col-md-6 hero_right">
+            <img src="" alt="" name="slide" class="img-fluid">
+        </div>
+    </div>
+
+    <div class="inner_hero"></div>
+
+      <!-- BODY -->
+
+    <div class="intro">
+        <hr size="6px" noshade class="mb-5">
+        <h1 class="text-center">
+            <span id="explore">
+                Explore
+            </span>
+            .
+            <span id="experience">Enjoy</span>
+            . Experience
+        </h1>
+    </div>
+
+    <div class="row my-5 homeflexbox">
+        <div class="col-md-3 homecontainer_1 mx-auto">
+
+
+        </div>
+
+        <div class="col-md-3 homecontainer_2 mx-auto">
+
+
+        </div>
+
+        <div class="col-md-3 homecontainer_3 mx-auto">
+
+
+        </div>
+
+    </div>
+
+
+    <div class="row bottom_box mx-auto">
+            <div class="col-md-5 bottom_box1">
+                <video controls width="500" height="400">
+                    <source src="static/videos/one.mp4" type="video/mp4">
+                    Your browser does not support video element
+                    </video>
+            </div>
+            <div class="col-md-5 bottom_box2">
+                <p id="why">
+                   WHY Erékéré?
+                </p>
+                <h2>We Go Extra!</h2>
+                <hr>
+                <p class="inner">
+                    It's not just about the tour. Erékéré is in the experience!
+                    We are a reliable tourism brand that offers luxury experience
+                    at pocket friendly prices. We cater for groups, as well as individuals.
+                </p>
+                <button class="mt-1 _mainbtn abt">About Us</button>
+            </div>
+            </div>
+    </div>
+                <!-- FOOTER -->
+
+    <div class="row mt-5">
+        <div class="col-md-12 mt-5 pre_footer">
+            
+            <h1>Join Our Mailing List</h1>
+                    <form>
+                        <input type="email" class="" name="email_address"
+                        placeholder="Enter Your Email Address">
+                        <button type="submit" id="mailing" class="_mainbtn">Go</button>
+                    </form>
+            <div class="f_col">
+                <h2>Our Trips</h2>
+                <ul class="px-5 mx-auto">
+                    <li>ENUGU</li>
+                    <li>KAYAK</li>
+                    <li>ODO AWAY</li>
+                </ul>
+            </div>
+            <div class="f_col">
+                <h2>Navigation</h2>
+                <ul class="px-5 mx-auto">
+                    <li><a href="/trip">Trip Gallery</a></li>
+                    <li><a href="/tour">Upcoming Tours</a></li>
+                    <li><a href="/media">Media Center</a></li>
+                </ul>
+            </div>
+            <div class="f_col">
+                <h2>Quick Links</h2>
+                <ul class="px-5 mx-auto">
+                    <li><a href="/about">About Us</a></li>
+                    <li><a href="/contact">Contact Us</a></li>
+                    <li><a href="/tour">Book A Tour</a></li>
+                </ul>
+            </div>
+            <div class="f_col">
+                <h2>Erékéré Africa</h2>
+                <p class="px-5 mx-auto">
+                    Ogundare Awise Street, Sholuyi, Gbagada, Lagos
+                    Nigeria<br>+234 805 257 2599
+                </p>
+                <img src="static/images/icons/fb.png" width="5%" class="icons fb">
+                <img src="static/images/icons/ig.png" width="5%" class="icons ig">
+                <img src="static/images/icons/twi.png" width="5%" class="icons twi">
+            </div>
+            
+        </div>
+        <div class="footer text-center">
+                <ul class="mt-4">
+                    <li><a href="/privacy-policy">Privacy Policy</a></li>&emsp; &emsp; &nbsp;
+                <li><a href="/terms-conditions">Terms of Use</a></li>&emsp; &emsp; &nbsp;
+                <li><a href="/site-requirements">Site Requirements</a></li>&emsp; &emsp; &nbsp;
+                <li><a href="https://www.yemi.dev/">Designed By Yemi</a></li>
+                </ul>
+            </ul>
+            <p class="mb-2">Erékéré Africa&copy; &emsp;&#45;&emsp;All Rights Reserved.</p>
+        </div>
+    </div>
+    
+      
+    
+    
+    </div>
+    </body>
+    
+    </html>

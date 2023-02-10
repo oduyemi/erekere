@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Erekere</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css') }}"/>
+    <link rel="stylesheet" href="{{url_for('static', filename='bootstrap/css/bootstrap.min.css') }}" type="text/css">
+    <script src="{{url_for('static', filename='js/jquery-3.6.1.min.js') }}"  type="text/javascript"></script>
+    <script type="text/javascript" language="javascript" src="{{url_for('static', filename='js/script.js') }}" defer></script>
+    <script src="{{url_for('static', filename='bootstrap/css/bootstrap.min.css') }}" defer type="text/javascript"></script>
+
+<style type="text/css">
+    .body_box2{
+        background-image: url(static/images/aboutus.jpg) !important;
+        background-position-y:35%;
+    }
+    .go{
+        position:relative; left:-30%
+    }
+
+    .imagebox{
+        background-image:url(static/images/a.jpg),
+        linear-gradient(65deg, #3066be 12%, #23f0c7 88%);
+    }
+    </style>
+    
+</head>
+<body>
+    <div class="container-fluid">
+            <!-- HEADER -->
+        <div class="row">
+            <div class="col-md-7 offset-5 _nav1 me-5 mt-1">
+                <ul>
+                    <li><a href="/about" target="_self">ABOUT US</a></li>&emsp;&nbsp;&emsp;
+                    <li><a href="/media" target="_self">MEDIA CENTER</a></li>&emsp;&nbsp;&emsp;
+                    <li><a href="www.instagram.com/erekereng/" target="_blank">INSTAGRAM</a></li>&emsp;&nbsp;&emsp;
+                    <li><a href="www.facebook.com/erekereng/" target="_blank">FACEBOOK</a></li>&emsp;&nbsp;&emsp;
+                    <li><a href="www.twitter.com/erekereng/" target="_blank">TWITTER</a></li>&emsp;&nbsp;&emsp;
+                    <li><a href="/account" target="_blank"  class="myacct">My ACCOUNT</a></li>&emsp;&nbsp;&emsp;
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 _nav2">
+                &emsp;<img src="static/images/logo/logo.png" alt="sitelogo" class="ms-5 logo">
+                &emsp;&nbsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&emsp;&emsp;&emsp;
+                <ul>
+                    <li><a href="/trip">Trip Gallery</a></li>&emsp;&nbsp;&emsp;
+                    <li><a href="/tours">Upcoming Tours</a></li>&emsp;&nbsp;&emsp;
+                    <li><a href="/contact">Contact Us</a></li>&emsp;&nbsp;&emsp;&emsp;&emsp;
+                </ul>
+                <button class="_mainbtn login">Login</button>&emsp;
+                <button class="_tbtn signup">Sign Up</button>
+            </div>
+        </div>    
+       
+        <div class="row hero_box">
+            <div class="col-md-7 textbox">
+                <a href="index.html">home &sol;</a>
+                    <a href="/">About-us</a>
+                <h1>About Us</h1>
+                <p>
+                We provide premium tourism services to our clients, teaching groups, as well as individuals
+                about the various benefits of traveling/ through experience rather than reading from a book.
+                </p>
+            </div>
+            <div class="col-md-5 imagebox">
+            </div>
+        </div>
+                <!-- BODY -->
+
+                <div class="row mx-auto body_box mb-5">
+                    <div height="12vh"></div>
+                    <div class="col-md-6 body_box2 my-5">
+                    </div>    
+                    <div class="col-md-5 body_box1">
+                        <h2 class="mt-3">What&apos;s Erekere About&quest;</h2>
+                        <p class="mt-4">
+                            Erekere is a Nigerian tour operating company that promotes African tourism and connects people.
+                            We organise group tours, school excursions, corporate retreats, holiday packages and also offer
+                            tour guide services within Africa, to educate people about the beauty within.
+                            We organise affordable tours to encourage Nigerians and even foreigners to explore our rich and
+                            diverse cultural heritage as well as our enthralling and beautiful landscapes.
+                        </p>
+                    </div>
+                </div>
+                <div class="row about_info justify-content-center align-items-center">
+                    <div class="col-md-5 offset-1">
+                        <h2 class="ms-4">Our Mission</h2>
+                        <p>
+                            <ul>
+                                <li>To be a reliable tourism brand that offers luxury experience at pocket friendly prices.</li>
+                                <li>To create awareness to Nigerians and Foreigners alike, about the the beauty and
+                                    richness of the Nigerian Culture and the need to develop and improve upon what
+                                    we already have.</li>
+                            </ul>
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <h2 class="ms-4">Our Vision</h2>
+                        <p>
+                            <ul>
+                                <li>To curate experiences that linger for either groups and individuals</li>
+                                <li>To help Nigerians understand and appreciate what this country has to offer by
+                                    improving domestic tourism and Increasing the level of Cultural enlightenment.</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+                <!-- FOOTER -->
+
+                <div class="row mt-5">
+                    <div class="col-md-12 mt-5 pre_footer">
+                        
+                        <h1>Join Our Mailing List</h1>
+                                <form>
+                                    <input type="email" class="" name="email_address"
+                                    placeholder="Enter Your Email Address">
+                                    <button type="submit" id="mailing" class="_mainbtn">Go</button>
+                                </form>
+                        <div class="f_col">
+                            <h2>Our Trips</h2>
+                            <ul class="px-5 mx-auto">
+                                <li>ENUGU</li>
+                                <li>KAYAK</li>
+                                <li>ODO AWAY</li>
+                            </ul>
+                        </div>
+                        <div class="f_col">
+                            <h2>Navigation</h2>
+                            <ul class="px-5 mx-auto">
+                                <li><a href="/trip">Trip Gallery</a></li>
+                                <li><a href="/tours">Upcoming Tours</a></li>
+                                <li><a href="/media">Media Center</a></li>
+                            </ul>
+                        </div>
+                        <div class="f_col">
+                            <h2>Quick Links</h2>
+                            <ul class="px-5 mx-auto">
+                                <li><a href="/about">About Us</a></li>
+                                <li><a href="/contact">Contact Us</a></li>
+                                <li><a href="/tours">Book A Tour</a></li>
+                            </ul>
+                        </div>
+                        <div class="f_col">
+                            <h2>Erékéré Africa</h2>
+                            <p class="px-5 mx-auto">
+                                Ogundare Awise Street, Sholuyi, Gbagada, Lagos
+                                Nigeria<br>+234 805 257 2599
+                            </p>
+                            <img src="static/images/icons/fb.png" width="5%" class="icons fb">
+                            <img src="static/images/icons/ig.png" width="5%" class="icons ig">
+                            <img src="static/images/icons/twi.png" width="5%" class="icons twi">
+                        </div>
+                        
+                    </div>
+                    <div class="footer text-center">
+                            <ul class="mt-4">
+                                <li><a href="/privacy-policy">Privacy Policy</a></li>&emsp; &emsp; &nbsp;
+                            <li><a href="/terms-conditions">Terms of Use</a></li>&emsp; &emsp; &nbsp;
+                            <li><a href="/site-requirements">Site Requirements</a></li>&emsp; &emsp; &nbsp;
+                            <li><a href="www.yemi.dev/">Designed By Yemi</a></li>
+                            </ul>
+                        </ul>
+                        <p class="mb-2">Erékéré Africa&copy; &emsp;&#45;&emsp;All Rights Reserved.</p>
+                    </div>
+                </div>
+                
+                  
+                
+                
+                </div>
+                </body>
+                
+                </html>
