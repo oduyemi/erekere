@@ -1,0 +1,25 @@
+<link rel="stylesheet" href="{{url_for('static', filename='bootstrap/css/bootstrap.min.css') }}" type="text/css">
+
+<div style="background-color: #FFDA29; color:purple; padding:3.5em;"  >
+  <legend style=>Payment Confirmation page</legend>
+ 
+  <h2>Thank you for choosing Erekere</h2>
+  <p>Please confirm your payment details as follows</p>
+  <div>
+    <form method="post" action="" enctype="multipart/form-data" width="70%">
+      <input type="hidden" name="csrf_token" value="csrf_token()">
+    <label for="" name="c_name">Name: </label>
+    <input class="form-control" name="c_name" value="{{ p.payment_userfname}}" readonly/>Amount:{{p.payment_amount}}</p>
+    <label for="" name="c_price">Amount:</label>
+      <input class="form-comtrol" name="c_amt" value="{{ p.payment_amount}}" readonly/>
+    <label for="" name="c_trip">Trip Number:</label>
+      <input class="form-comtrol" type="number" name="c_trip" value="{{ p.payment_trip}}" readonly/>
+        <label for="receipt" name="receipt" style="font-weight:600">Please upload your transaction receipt here</label><br>
+        <input type="file" name="receipt" placeholder="Upload transaction receipt" class="form-control my-3"/>
+        <input type="submit" value="Submit" class="btn btn-dark"/>
+    </form>
+  </div>
+ </div>
+ 
+
+

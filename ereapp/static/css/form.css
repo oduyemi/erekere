@@ -125,7 +125,7 @@ input[type=email]::placeholder{
 .back label{
     position: absolute;
     bottom: 40px;
-    width:90%;
+    width:30%;
     font-size: 16px;
     text-align: center;
     color: #10349A;

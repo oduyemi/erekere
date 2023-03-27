@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Login - Erékéré</title>
+  <link rel="stylesheet" href="{{url_for('static', filename='css/form.css')}}"/>
+  <link rel="stylesheet" href="{{url_for('static', filename='css/style.css') }}"/>
+  <link rel="stylesheet" href="{{url_for('static', filename='bootstrap/css/bootstrap.min.css') }}" type="text/css">
+  <script src="{{url_for('static', filename='js/jquery-3.6.1.min.js') }}"  type="text/javascript"></script>
+  <script type="text/javascript" language="javascript" src="{{url_for('static', filename='js/script.js') }}" defer></script>
+  <script src="{{url_for('static', filename='bootstrap/css/bootstrap.min.css') }}" defer type="text/javascript"></script>
+    <style>
+      .form_box{
+        background-color: #0A122A !important;
+      }
+      .formlink span a{
+        text-decoration:none;
+        color:brown;
+        font-size:smaller
+    }
+    .formlink span{
+        color:#10349A;
+        font-size:smaller
+    }
+    </style>
+
+</head>
+<body>
+    <div class="container-fluid form_box">
+        <form method="post" action="">
+        <div class="card">
+            <input type="checkbox" id="chk" aria-hidden="true" name="">
+            <div class="content">
+                <div class="front">
+                    <div class="inner">
+                        <legend class="text-center border-bottom mb-4">Log in</legend>
+                        {{ form.csrf_token }}
+                        
+
+                        {% with messages = get_flashed_messages(with_categories=true) %}
+{% if messages %}
+  {% for category, message in messages %}
+    <div class="alert alert-{{ category }}">
+      {{ message }}
+  {% endfor %}
+{% endif %}
+
+{% endwith %}
+<div class="txt_field form-group">
+  {% if form.username.errors %}
+    {{ form.username (class="is_invalid") }}
+      <div class="invalid-feedback">
+        {% for error in form.username.errors %}
+        <span>{{ error }}</span>
+        {% endfor %}
+      </div>
+  <div>
+  {% else %}
+    {{ form.username }}
+  {% endif %}
+</div>
+                      <div class="txt_field form-group">
+
+                        {% if form.password.errors %}
+                          {{ form.password (class="is_invalid") }}
+                            <div class="invalid-feedback">
+                              {% for error in form.password.errors %}
+                              <span>{{ error }}</span>
+                              {% endfor %}
+                            </div>
+                        <div>
+                        {% else %}
+                          {{ form.password }}
+                        {% endif %}
+                      </div>
+
+                    <!--<label for="chk" aria-hidden="true">Forget Password?</label><-->
+                    <div class="txt_field form-group">
+                    {{ form.submit (class="_mainbtn mx-4") }}
+                    <div class="formlink">
+                        <span class="ms-5">Not an admin? <a href="{{url_for("home")}}">Click Here</a></span>
+                        </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+</form>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

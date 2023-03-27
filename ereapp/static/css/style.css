@@ -253,7 +253,7 @@
 }
 
 .pre_footer{
-    height:90vh;
+    height:50vh;
     background-color: #0A122A;
     display:flex;
     flex-direction: row;
@@ -312,7 +312,7 @@
 }
 
 .footer{
-    height:16vh;
+    height:5vh;
 }
 .footer li{
     display: inline;
@@ -494,9 +494,7 @@ hr{
     position:relative;
     top:140px
 }
-.terms{
-    
-}
+
 .terms p,li{
     width:80% !important;
     font-size: medium;
@@ -511,9 +509,7 @@ hr{
 .about_info h2{
     font-size: large;
 }
-.about_info p{
 
-}
 .gallery{
     justify-content: space-between;
     align-items: center;
@@ -552,6 +548,9 @@ hr{
 }
 
 
+.error-msg{
+    color:red;
+}
 
 
 
@@ -610,6 +609,8 @@ hr{
     left: 5%;
     background-color: #e5e5e5;
   }
+
+
   
   
   /*
@@ -619,9 +620,64 @@ hr{
   .flex-equal > * {
     flex: 1;
   }
-  @media (min-width: 768px) {
+  @media (min-width: 700px) {
     .flex-md-equal > * {
       flex: 1;
     }
-  }
-  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 700px) {
+    .bottom_box1{
+        display:none
+    }
+    .bottom_box2{
+        position: relative;
+        left:20%;
+        top:60%
+    }
+    .inner_hero{
+        height:42vh ;
+        width: 87vw;
+    }
+    hr{
+        display:none
+    }
+    .pre_footer{
+        height:70vh;
+    }
+    .pre_footer h2{
+        font-size:smaller
+    }
+    .f_col a,p{
+        font-size:smaller
+    }
+    ._mainbtn{
+        width:40%
+    }
+    ._tbtn{
+        width:40%
+    }
+   .pre_footer h1{
+    font-size: large;
+   }
+}

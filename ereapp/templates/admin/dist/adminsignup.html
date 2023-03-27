@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Sign up - Erékéré</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/form.css')}}"/>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css') }}"/>
+    <link rel="stylesheet" href="{{url_for('static', filename='bootstrap/css/bootstrap.min.css') }}" type="text/css">
+    <script src="{{url_for('static', filename='js/jquery-3.6.1.min.js') }}"  type="text/javascript"></script>
+    <script type="text/javascript" language="javascript" src="{{url_for('static', filename='js/script.js') }}" defer></script>
+    <script src="{{url_for('static', filename='bootstrap/css/bootstrap.min.css') }}" defer type="text/javascript"></script>
+<style>
+    input[type=text],
+    input[type=password],
+    input[type=email]{
+    width: 95;
+    height:40px;
+    padding: 10px;
+    margin: 4px 24px;
+    box-sizing: border-box;
+    color: #000;
+    background-color: #F5EE9E;
+    outline: none;
+    border-radius: 4px;
+    }
+    .card{
+        width:380px;
+        height:540px;
+        perspective:1500px;
+    }
+    button{
+        position: relative !important;
+        right: -36px;
+        top: 3%;
+        width: 82%;
+        padding: 7px;
+        color: #0A122A;
+        background: #ffda29;
+        text-align: center;
+        font-size: 18px;
+        border-radius: 4px;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        transition: .3s;
+    }
+    .inner h2{
+        position:relative;
+        bottom: 2px;
+    }
+    .form_box{
+        background-color:#0A122A;
+    }
+    .formlink span a{
+        text-decoration:none;
+        color:brown;
+        font-size:smaller
+    }
+    .formlink span{
+        color:#10349A;
+        font-size:smaller
+    }
+</style>
+</head>
+<body>
+            <div class="container-fluid form_box">
+             <form action="" method="post">
+                <input type="hidden" name="csrf_token" value="csrf_token()"/>
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }}">
+                    {{ message }}
+                {% endfor %}
+                {% endif %}
+
+                {% endwith %}
+                <div class="card">
+                    <input type="checkbox" id="chk" aria-hidden="true" name="">
+                    <div class="content">
+                        <div class="front">
+                            <div class="inner">
+                                <h2 class="">Sign Up</h2>
+                                <input type="text" name="fname" placeholder="First name" class="mt-5 mx-5" required>
+                                <input type="text" name="lname" placeholder="Last name" class="mt-3 mx-5" required>
+                                <input type="text" name="username" placeholder="Create username" class="mt-3 mx-5" required>
+                                <input type="password" name="password" id="pwd" placeholder="Create password" class="mt-3 mx-5" required>
+                                <input type="password" name="c_password" id="c_pwd" placeholder="Confirm password" class="mt-3 mx-5"
+                                onchange="checker()" required>
+                                <button type="submit">Sign Up</button>
+                                <div class="formlink mt-2">
+                                    <span class="ms-5">Already Registered? <a href="{{url_for("adminlogin")}}">Click Here</a></span>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+
+
+</body>
+
+</html>

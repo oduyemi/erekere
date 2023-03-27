@@ -1,0 +1,102 @@
+{% extends "user/contact.html" %}
+{% block page_title %}<title>Payment - Erékéré</title>{% endblock %}
+{% block style %}
+        .go{
+            position:relative;
+            left:-30%
+        }
+        .imagebox{
+            background-image:url(static/images/pd1.jpg),
+            linear-gradient(65deg, #3066be 12%, #23f0c7 88%);
+            
+        }
+        
+        #preference{
+            font-size:small;
+            font-weight:600
+        }
+        .form{
+            font-size:medium;
+        }
+        .form-bt{
+            text-align:center
+        }
+        #form-width{
+            width: 52%;
+        }
+        {% endblock %}
+
+        {% block hero %}    
+        <div class="row hero_box">
+            <div class="col-md-7 textbox">
+                <a href="{{ url_for('home') }}">home &sol;</a>
+                    <a href="/pay">book-a-trip/pay</a>
+                <h1></h1>
+                <p>
+                    We are the best touring guide in Nigeria. Erekere is big on experience and also pocket-friendly 
+                </p>
+            </div>
+            <div class="col-md-5 imagebox"></div>{% endblock %}
+        </div>
+                <!-- BODY -->
+
+{% block content %}
+<div class="row body_box mx-auto">
+    <div class="col-md-5 body_box1">
+        <h3>Erekere Account Details</h3>
+        <label class="col-md-2 mt-4 ms-4">Bank:</label><span>GTBank</span><br>
+        <label class="col-md-2 ms-4">Account Number:</label><span>0123456789</span><br>
+        <label class="col-md-2 ms-4">Account Name:</label><span>Erekere Tours</span>
+    </div>
+    <div class="col-md-5 body_box1">
+        <h3>Make Payment</h3>
+    <form action="" method="POST" action="">
+        <input type="hidden" name="csrf_token" value="csrf_token()"/>
+        <div class="mb-3 form-group mx-4">
+            {% for item in qfeeds %}
+            <p style="color:brown"><label>{{ item.tour_name}}: </label> {{ item.tour_price}}</p>
+            {% endfor %}
+        </div>
+
+        <div class="mb-3 form-group row">
+            <label for="fullname" class="col-md-2">Full Name:</label>
+            <div class="col-md-6">
+                <input type="text" name="fullname" placeholder="Full name" class="form-control border-success">
+            </div>
+        </div>
+
+        <div class="mb-3 form-group row">
+            <label class="col-md-2">Trip:</label>
+            <div class="col-md-5">
+        <select name="dtrip">
+        <option value="" class="text-center"> - Choose Trip - </option>
+        {% for row in qfeeds %}
+        <option value="{{row.tour_id}}">{{ row.tour_name}}</option>
+        {% endfor %}
+        </select>
+            </div>
+        </div>
+
+        <div class="mb-3 form-group row">
+            <label for="amount" class="col-md-2">Amount:</label>
+            <div class="col-md-6">
+                <input type="number" name="amount" placeholder="Amount" class="form-control border-success">
+                
+            </div>
+        </div>
+
+       
+            <div class="col-md-10">
+                <a href="'/pay/<int:tripid>',tripid=row.tour_id" class="btn btn-lg btn-warning col-10">Yes, I have made payment</a>
+                </div>
+    </form>
+</div>
+<form id="paymentForm">     
+</div>
+{% endblock %} 
+{% block form_intro %}{% endblock %}
+{% block form %} {% endblock %}
+
+
+
+

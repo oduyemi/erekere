@@ -17,6 +17,27 @@ setTimeout("changeImg()", time);
 }
 window.onload=changeImg;
 
+function checker(event){
+    var pswd = document.getElementById("c_pwd").value
+    var confirmation = document.getElementById("pwd").value
+    if(pswd != confirmation){
+        alert("Both passwords must match!")
+        event.preventDefault()
+    }
+}
+
+
+function checker2(event){
+    var pswd = document.getElementById("pswd2").value
+    var confirmation = document.getElementById("pswd1").value
+    if(pswd != confirmation){
+        alert("Both passwords must match!")
+        event.preventDefault()
+    }
+}
+
+
+
 $(document).ready(function(){
 
     $('.logo').click(function(){
@@ -53,4 +74,5 @@ $(document).ready(function(){
     $('.tour').click(function(){
         window.location.href = '/tours';
     });
+
 });
